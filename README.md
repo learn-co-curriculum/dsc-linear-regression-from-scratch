@@ -1,7 +1,15 @@
 
-# Introduction to Simple Linear Regression - Lab
+# Simple Linear Regression - Lab
 
-## SWBAT
+## Introduction
+
+Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learing algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
+
+
+## Objectives
+
+You will be able to:
+
 * Calculate the slope of a line using standard slope formula 
 * Calculate the y-intercept using the slope value
 * Draw a regression line based on calculated slope and intercept
@@ -9,9 +17,7 @@
 
 
 
-## Introduction
-
-Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learing algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
+## Let's get started 
 
 A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra. 
 
@@ -35,7 +41,7 @@ X = np.array([1,2,3,4,5,6,8,8,9,10], dtype=np.float64)
 Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 ```
 
-### Show a scatter plot between X and Y and comment on the output 
+## Show a scatter plot between X and Y and comment on the output 
 
 
 ```python
@@ -61,7 +67,9 @@ In a data analysis context, we can think of these points as two vectors:
 * **vector X**: the features of our model
 * **vector Y**: the labels for given features
 
-### Write a function calc_slope() that takes in x and y vectors and calculates the slope using the formula shown above. 
+## Write a function calc_slope()
+
+Write a function `calc_clope()` that takes in x and y vectors and calculates the slope using the formula shown above. 
 
 
 ```python
@@ -82,7 +90,9 @@ As a reminder, the calculation for the best-fit line's y-intercept is:
 
 ![](best-fit-y-intercept.png)
 
-### Write a function best fit that takes in X and Y, calculates the slope using above above  and intercept using the formula. The function should return slope and intercept values. 
+## Write a function best_fit()
+
+Write a function `best_fit()` that takes in X and Y, calculates the slope using above above  and intercept using the formula. The function should return slope and intercept values. 
 
 
 ```python
@@ -104,7 +114,9 @@ We now have a working model with `m` and `b` as model parameters. We can create 
 
 * Recall that `y=mx+b`. We can now use slope and intercept values along with X data points (features) to calculate the Y data points (labels) of the regression line. 
 
-### Write a function reg_line() that takes in slope, intercept and X vector and calculates the regression line using Y= mX+c for each point in X
+## Write a function reg_line() 
+
+Write a function `reg_line()` that takes in slope, intercept and X vector and calculates the regression line using Y= mX+c for each point in X.
 
 
 ```python
@@ -116,7 +128,7 @@ def reg_line (m, b, xs):
 #regression_line = reg_line(m,b,X)
 ```
 
-### Plot the (x,y) data points and draw the calculated regression line for visual inspection.
+## Plot the (x,y) data points and draw the calculated regression line for visual inspection
 
 
 ```python
@@ -129,7 +141,7 @@ def reg_line (m, b, xs):
 
 So there we have it, our least squares regression line. This is the best fit line and does describe the data pretty well (still not perfect though). 
 
-### Describe your Model Mathematically and in words
+## Describe your Model Mathematically and in words
 
 
 ```python
@@ -157,7 +169,7 @@ y_predicted
 # 10.155092592592592
 ```
 
-### Plot the prediction with actual data and regression line 
+## Plot the prediction with actual data and regression line 
 
 
 ```python
