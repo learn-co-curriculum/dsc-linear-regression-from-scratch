@@ -132,7 +132,7 @@ We now have a working model with `m` and `b` as model parameters. We can create 
 
 ## Write a function reg_line()
 
-Write a function `reg_line()` that takes in slope, intercept and X vector and calculates the regression line using Y= mX+c for each point in X
+Write a function `reg_line()` that takes in slope, intercept and X vector and calculates the regression line using Y= mX+b for each point in X
 
 
 ```python
