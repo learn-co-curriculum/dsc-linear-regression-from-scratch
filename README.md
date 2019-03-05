@@ -20,11 +20,15 @@ You will be able to:
 
 A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra. 
 
-The calculation for the best-fit line's slope, `m` is calculated as :
-![](best-fit-slope.png)
+In the lesson, we showed the best-fit line's slope $\hat m$ can be calculated as:
 
+$$\hat m = \rho \frac{S_Y}{S_X}$$
 
-As in our previous lesson, let's break down the formula into its parts. First we shall import the required libraries and define some data points to work with. We shall first create some toy data as numpy arrays. Let's do this for you to give you a head start. 
+With $\rho$ being the correlation coefficient and  ${S_Y}$ and ${S_X}$ The standard deviation of $x$ and $y$ respectively. It can be shown that this is also equal to:
+
+$$\hat m = \dfrac{\overline{x}*\overline{y}-\overline{xy}}{(\overline{x})^2-\overline{x^2}}$$
+
+You'll use the latter formula in this lab. As in our previous lab, let's break down the formula into its parts. First you'll import the required libraries and define some data points to work with. Next, you'll use some pre-created toy data in numpy arrays. Let's do this for you to give you a head start. 
 
 
 ```python
@@ -40,7 +44,7 @@ X = np.array([1,2,3,4,5,6,8,8,9,10], dtype=np.float64)
 Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 ```
 
-## Show a scatter plot between X and Y and comment on the output 
+## Create a scatter plot between X and Y and comment on the output
 
 
 ```python
@@ -63,10 +67,10 @@ Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 
 In a data analysis context, we can think of these points as two vectors:
 
-* **vector X**: the features of our model
-* **vector Y**: the labels for given features
+* **vector X**: The independent variable or predictor
+* **vector Y**: The dependent variable or target variable
 
-## Write a function calc_slope() 
+## Write a function `calc_slope()`
 
 Write a function `calc_slope()` that takes in x and y vectors and calculates the slope using the formula shown above. 
 
@@ -87,7 +91,8 @@ Great, so we have our slope. Next we calculate the intercept.
 
 As a reminder, the calculation for the best-fit line's y-intercept is:
 
-![](best-fit-y-intercept.png)
+$$\hat c = \overline y - \hat m \overline x $$
+
 
 ## Write a function best_fit()
 
@@ -109,13 +114,13 @@ def best_fit(xs,ys):
 # (0.5393518518518512, 6.379629629629633)
 ```
 
-We now have a working model with `m` and `b` as model parameters. We can create a line for the data points using the calculated slope and intercept:
+We now have a working model with `m` and `c` as model parameters. We can create a line for the data points using the calculated slope and intercept:
 
-* Recall that `y=mx+b`. We can now use slope and intercept values along with X data points (features) to calculate the Y data points (labels) of the regression line. 
+* Recall that $y = mx + c$. We can now use slope and intercept values along with X data points (features) to calculate the Y data points (labels) of the regression line. 
 
 ## Write a function reg_line()
 
-Write a function `reg_line()` that takes in slope, intercept and X vector and calculates the regression line using Y= mX+b for each point in X
+Write a function `reg_line()` that takes in slope, intercept and X vector and calculates the regression line using $y= mx + c$ for each point in X
 
 
 ```python
@@ -140,7 +145,7 @@ def reg_line (m, b, xs):
 
 So there we have it, our least squares regression line. This is the best fit line and does describe the data pretty well (still not perfect though). 
 
-## Describe your Model Mathematically and in words
+## Describe your Model Mathematically and in Words
 
 
 ```python
@@ -154,10 +159,11 @@ So there we have it, our least squares regression line. This is the best fit lin
 
 So, how might you go about actually making a prediction based on this model you just made?
 
-Now that we have a working model with m and b as model parameters. We can fill in a value of x with these parameters to identify a corresponding value of y according to our model. Recall the formula 
-![](pred.jpg)
+Now that we have a working model with m and b as model parameters. We can fill in a value of x with these parameters to identify a corresponding value of $\hat y$ according to our model. Recall the formula:
 
-Let's try to find a y prediction for a new value of x = 7 and unknown y, and plot the new prediction with existing data 
+$$\hat y = \hat mx + \hat c$$
+
+Let's try to find a y prediction for a new value of $x = 7$ and unknown $y$, and plot the new prediction with existing data 
 
 
 ```python
@@ -180,8 +186,8 @@ y_predicted
 ![png](index_files/index_18_0.png)
 
 
-We now know how to create our own models, which is great, but we're stilling missing something integral: how accurate is our model? This is the topic for discussion in the next lab.
+You now know how to create your own models, which is great, but you still haven't answered one very important question: how accurate is our model? This will be discussed next.
 
 ## Summary
 
-In this lesson, we learnt how we can draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label (y-value) of a previously unseen feature (x-value). The lesson uses a simple set of data points for demonstration. Students should be able to plug in other datasets and practice with predictions for accuracy. 
+In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($\hat x$-value). The lesson uses a simple set of data points for demonstration.
