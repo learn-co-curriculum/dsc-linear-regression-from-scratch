@@ -221,4 +221,4 @@ You now know how to create your own models, which is great, but you still haven'
 
 ## Summary
 
-In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($\hat x$-value). The lesson uses a simple set of data points for demonstration.
+In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($x$-value). The lesson uses a simple set of data points for demonstration.
