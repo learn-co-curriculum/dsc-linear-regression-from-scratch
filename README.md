@@ -108,8 +108,8 @@ def best_fit(xs,ys):
 
 # Uncomment below to test your function
 
-#m, b = best_fit(X,Y)
-# m,b
+#m, c = best_fit(X,Y)
+#m, c
 
 # (0.5393518518518512, 6.379629629629633)
 ```
@@ -124,12 +124,12 @@ Write a function `reg_line()` that takes in slope, intercept and X vector and ca
 
 
 ```python
-def reg_line (m, b, xs):
+def reg_line (m, c, xs):
     
     pass
 
 # Uncomment below
-#regression_line = reg_line(m,b,X)
+#regression_line = reg_line(m,c,X)
 ```
 
 ## Plot the (x,y) data points and draw the calculated regression line for visual inspection
@@ -190,4 +190,4 @@ You now know how to create your own models, which is great, but you still haven'
 
 ## Summary
 
-In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($\hat x$-value). The lesson uses a simple set of data points for demonstration.
+In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($x$-value). The lesson uses a simple set of data points for demonstration.
