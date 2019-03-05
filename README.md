@@ -195,6 +195,8 @@ y_predicted
 
 
 
+## Plot the prediction with actual data and regression line 
+
 
 ```python
 
@@ -206,7 +208,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_17_0.png)
+![png](index_files/index_18_0.png)
 
 
 We now know how to create our own models, which is great, but we're stilling missing something integral: how accurate is our model? This is the topic for discussion in the next lab.
