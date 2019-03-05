@@ -50,7 +50,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_6_0.png)
+![png](index_files/index_3_0.png)
 
 
 
@@ -154,7 +154,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_16_0.png)
+![png](index_files/index_12_0.png)
 
 
 So there we have it, our least squares regression line. This is the best fit line and does describe the data pretty well (still not perfect though). 
@@ -206,7 +206,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_21_0.png)
+![png](index_files/index_17_0.png)
 
 
 We now know how to create our own models, which is great, but we're stilling missing something integral: how accurate is our model? This is the topic for discussion in the next lab.
