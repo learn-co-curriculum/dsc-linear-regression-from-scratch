@@ -15,8 +15,6 @@ You will be able to:
 * Draw a regression line based on calculated slope and intercept
 * Predict the label of a previously unseen data element
 
-
-
 ## Let's get started 
 
 A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra. 
@@ -50,7 +48,7 @@ Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 ```
 
 
-![png](index_files/index_6_0.png)
+![png](index_files/index_3_0.png)
 
 
 
@@ -136,7 +134,7 @@ def reg_line (m, b, xs):
 ```
 
 
-![png](index_files/index_16_0.png)
+![png](index_files/index_12_0.png)
 
 
 So there we have it, our least squares regression line. This is the best fit line and does describe the data pretty well (still not perfect though). 
@@ -178,7 +176,7 @@ y_predicted
 ```
 
 
-![png](index_files/index_22_0.png)
+![png](index_files/index_18_0.png)
 
 
 We now know how to create our own models, which is great, but we're stilling missing something integral: how accurate is our model? This is the topic for discussion in the next lab.
