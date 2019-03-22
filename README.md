@@ -3,7 +3,7 @@
 
 ## Introduction
 
-Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learing algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
+Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learning algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
 
 ## Objectives
 
@@ -28,7 +28,7 @@ With $\rho$ being the correlation coefficient and  ${S_Y}$ and ${S_X}$ The stand
 
 $$\hat m = \dfrac{\overline{x}*\overline{y}-\overline{xy}}{(\overline{x})^2-\overline{x^2}}$$
 
-You'll use the latter formula in this lab. As in our previous lab, let's break down the formula into its parts. First you'll import the required libraries and define some data points to work with. Next, you'll use some pre-created toy data in numpy arrays. Let's do this for you to give you a head start. 
+You'll use the latter formula in this lab. As in our previous lab, let's break down the formula into its parts. First, you'll import the required libraries and define some data points to work with. Next, you'll use some pre-created toy data in numpy arrays. Let's do this for you to give you a head start. 
 
 
 ```python
@@ -107,7 +107,7 @@ $$\hat c = \overline y - \hat m \overline x $$
 
 ## Write a function best_fit()
 
-Write a function `best_fit()` that takes in X and Y, calculates the slope using above above  and intercept using the formula. The function should return slope and intercept values. 
+Write a function `best_fit()` that takes in X and Y, calculates the slope and intercept using the formula. The function should return slope and intercept values. 
 
 
 ```python
