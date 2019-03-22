@@ -113,7 +113,7 @@ Write a function `best_fit()` that takes in X and Y, calculates the slope using 
 ```python
 def best_fit(xs,ys):
     
-    # use the slope function with intercept formula to return calculate slop and intercept from data points
+    # use the slope function with intercept formula to return calculate slope and intercept from data points
     m = calc_slope(xs,ys)
     c = np.mean(ys) - m*np.mean(xs)
     
