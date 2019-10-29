@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you'll get some hand-on practice developing simple linear regression models. 
+In this lab, you'll get some hand-on practice developing a simple linear regression model. You'll also use your model to make a prediction about new data! 
 
 ## Objectives
 
@@ -86,7 +86,7 @@ plt.scatter(X,Y)
 
 
 
-    <matplotlib.collections.PathCollection at 0x1150111d0>
+    <matplotlib.collections.PathCollection at 0x11c6152e8>
 
 
 
@@ -243,7 +243,7 @@ plt.legend()
 
 
 
-    <matplotlib.legend.Legend at 0x1074fd5f8>
+    <matplotlib.legend.Legend at 0x11c6d3748>
 
 
 
@@ -325,11 +325,17 @@ plt.scatter(X,Y,color='#000F72',label='data')
 plt.plot(X, regression_line, color='#880000', label='regression line')
 plt.scatter(x_new,y_predicted,color='r',label='Prediction: '+ str(np.round(y_predicted,1)))
 plt.legend(loc=4)
-plt.show()
 ```
 
 
-![png](index_files/index_28_0.png)
+
+
+    <matplotlib.legend.Legend at 0x11c8617b8>
+
+
+
+
+![png](index_files/index_28_1.png)
 
 
 You now know how to create your own models, which is great! Next, you'll find out how to determine the accuracy of your model!
