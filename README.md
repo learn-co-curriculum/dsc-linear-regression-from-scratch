@@ -3,7 +3,7 @@
 
 ## Introduction
 
-In this lab, you'll get some hand-on practice developing simple linear regression models. 
+In this lab, you'll get some hand-on practice developing a simple linear regression model. You'll also use your model to make a prediction about new data! 
 
 ## Objectives
 
