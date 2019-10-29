@@ -3,32 +3,26 @@
 
 ## Introduction
 
-Regression analysis forms the basis of machine learning experiments. Understanding regression will help you to get the foundations of most machine learning algorithms. Ever wondered what's at the heart of an artificial neural network processing unstructured data like music and graphics? It can be linear regression!
+In this lab, you'll get some hand-on practice developing simple linear regression models. 
 
 ## Objectives
 
 You will be able to:
 
-* Calculate the slope of a line using standard slope formula 
-* Calculate the y-intercept using the slope value
-* Draw a regression line based on calculated slope and intercept
-* Predict the label of a previously unseen data element
-
-
+* Perform a linear regression using self-constructed functions
+* Interpret the parameters of a simple linear regression model in relation to what they signify for specific data
 
 ## Let's get started
 
-A first step towards understanding regression is getting a clear idea about "linear" regression and basic linear algebra. 
-
-In the lesson, we showed the best-fit line's slope $\hat m$ can be calculated as:
+The best-fit line's slope $\hat m$ can be calculated as:
 
 $$\hat m = \rho \frac{S_Y}{S_X}$$
 
-With $\rho$ being the correlation coefficient and  ${S_Y}$ and ${S_X}$ The standard deviation of $x$ and $y$ respectively. It can be shown that this is also equal to:
+With $\rho$ being the correlation coefficient and ${S_Y}$ and ${S_X}$ being the standard deviation of $x$ and $y$, respectively. It can be shown that this is also equal to:
 
 $$\hat m = \dfrac{\overline{x}*\overline{y}-\overline{xy}}{(\overline{x})^2-\overline{x^2}}$$
 
-You'll use the latter formula in this lab. As in our previous lab, let's break down the formula into its parts. First, you'll import the required libraries and define some data points to work with. Next, you'll use some pre-created toy data in numpy arrays. Let's do this for you to give you a head start. 
+You'll use the latter formula in this lab. First, break down the formula into its parts. To do this, you'll import the required libraries and define some data points to work with. Next, you'll use some pre-created toy data in NumPy arrays. Let's do this for you to give you a head start. 
 
 
 ```python
@@ -38,13 +32,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import style
 style.use('ggplot')
+%matplotlib inline
 
-# Initialize vectors X and Y with given values and create a scatter plot
+# Initialize arrays X and Y with given values
+# X = Independent Variable
 X = np.array([1,2,3,4,5,6,8,8,9,10], dtype=np.float64)
+# Y = Dependent Variable
 Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 ```
 
-## Create a scatter plot between X and Y and comment on the output
+## Create a scatter plot of X and Y and comment on the output
 
 
 ```python
@@ -53,26 +50,17 @@ Y = np.array([7,7,8,9,9,10,10,11,11,12], dtype=np.float64)
 ```
 
 
-![png](index_files/index_3_0.png)
-
-
-
 ```python
-# Your observations about relationship in X and Y 
+# Your observations about the relationship between X and Y 
 
 
 
 #
 ```
 
-In a data analysis context, we can think of these points as two vectors:
-
-* **vector X**: The independent variable or predictor
-* **vector Y**: The dependent variable or target variable
-
 ## Write a function `calc_slope()`
 
-Write a function `calc_slope()` that takes in x and y vectors and calculates the slope using the formula shown above. 
+Write a function `calc_slope()` that takes in X and Y and calculates the slope using the formula shown above. 
 
 
 ```python
@@ -139,10 +127,6 @@ def reg_line (m, c, xs):
 # Plot data and regression line
 ```
 
-
-![png](index_files/index_12_0.png)
-
-
 So there we have it, our least squares regression line. This is the best fit line and does describe the data pretty well (still not perfect though). 
 
 ## Describe your Model Mathematically and in Words
@@ -155,7 +139,7 @@ So there we have it, our least squares regression line. This is the best fit lin
 
 ```
 
-## Predicting label for new data
+## Predicting new data
 
 So, how might you go about actually making a prediction based on this model you just made?
 
@@ -163,7 +147,7 @@ Now that we have a working model with m and b as model parameters. We can fill i
 
 $$\hat y = \hat mx + \hat c$$
 
-Let's try to find a y prediction for a new value of $x = 7$ and unknown $y$, and plot the new prediction with existing data 
+Let's try to find a y prediction for a new value of $x = 7$, and plot the new prediction with existing data 
 
 
 ```python
@@ -174,7 +158,7 @@ y_predicted
 # 10.155092592592592
 ```
 
-## Plot the prediction with actual data and regression line 
+## Plot the prediction with the rest of the data
 
 
 ```python
@@ -182,12 +166,8 @@ y_predicted
 
 ```
 
-
-![png](index_files/index_18_0.png)
-
-
-You now know how to create your own models, which is great, but you still haven't answered one very important question: how accurate is our model? This will be discussed next.
+You now know how to create your own models, which is great! Next, you'll find out how to determine the accuracy of your model!
 
 ## Summary
 
-In this lesson, you learned how to draw a best fit line for given data labels and features, by first calculating the slope and intercept. The calculated regression line was then used to predict the label ($\hat y$-value) of a previously unseen feature ($x$-value). The lesson uses a simple set of data points for demonstration.
+In this lesson, you learned how to perform linear regression for data that are linearly related. You first calculated the slope and intercept parameters of the regression line that best fit the data. You then used the regression line parameters to predict the value ($\hat y$-value) of a previously unseen feature ($x$-value). 
