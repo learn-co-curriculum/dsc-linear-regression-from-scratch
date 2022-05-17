@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this codealong, you'll get some hand-on practice developing a simple linear regression model. In practice, you would typically use a code library rather than writing linear regression code from scratch, but this is an exercise designed to help you see what is happening "under the hood".
+In this codealong, you'll get some hands-on practice developing a simple linear regression model. In practice, you would typically use a code library rather than writing linear regression code from scratch, but this is an exercise designed to help you see what is happening "under the hood".
 
 ## Objectives
 
@@ -43,7 +43,7 @@ $$\hat{y} = \hat{\beta_0} + \hat{\beta_1} x $$
 
 Everything in these equations represented with a "hat" (e.g. $\hat{y}$ rather than just $y$) means that it is an estimate or an approximation. The only part that is not using this notation is $x$, because we have the actual data values for the independent variable.
 
-So, how do you find the line with the best fit? You may think that you have to try lots and lots of different lines to see which one fits best. Fortunately, this task is not as complicated as in may seem. Given some data points, **the best-fit line always has a distinct slope and y-intercept that can be calculated using simple linear algebraic approaches**.
+So, how do you find the line with the best fit? You may think that you have to try lots and lots of different lines to see which one fits best. Fortunately, this task is not as complicated as it may seem. Given some data points, **the best-fit line always has a distinct slope and y-intercept that can be calculated using simple linear algebraic approaches**.
 
 ### The Least-Squares Method
 
@@ -60,7 +60,7 @@ Breaking down those components, we have:
 
 (You can visit [this Wikipedia link](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line) to get take a look into the math behind the derivation of this formula.)
 
-Then once we have the slope value ($\hat{m}$), we can put it back into our formula $(\hat{y} = \hat{m} x + \hat{c})$ to calculate intercept. The idea is that
+Then once we have the slope value ($\hat{m}$), we can put it back into our formula $(\hat{y} = \hat{m} x + \hat{c})$ to calculate the intercept. The idea is that
 
 $$\bar{y} = \hat{c} + \hat{m} \bar{x}$$
 
@@ -329,7 +329,7 @@ So there we have it, our least squares regression line. This is the best fit lin
 
 ## Describe your Model Mathematically and in Words
 
-What is the overall formula of the model you have created? How would you describe the slope and intercept, and what they say about the relationship between x and y?
+What is the overall formula of the model you have created? How would you describe the slope and intercept, and what do they say about the relationship between x and y?
 
 ---
 
